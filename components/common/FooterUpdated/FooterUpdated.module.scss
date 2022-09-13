@@ -1,0 +1,134 @@
+@import "/styles/variables.scss";
+
+.container {
+  margin-top: 10rem;
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  // position: fixed;
+  background: white;
+
+  @media screen and (max-width: $mobileResolution) {
+    padding: 0.5rem 1rem;
+    padding-bottom: 5rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobileResolution) {
+      flex-direction: column;
+    }
+
+    .bottomSection {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+
+      .brandLogo {
+        display: flex;
+        justify-content: space-between;
+
+        .logo1 {
+          position: relative;
+          height: 82px;
+          width: 82px;
+          @media screen and (max-width: $mobileResolution) {
+            display: none;
+          }
+        }
+
+        .logo2 {
+          position: relative;
+          height: 45px;
+          width: 226px;
+          margin-top: 20px;
+
+          @media screen and (max-width: $mobileResolution) {
+            height: 100px;
+            width: 100px;
+            margin-top: 0px;
+          }
+        }
+      }
+
+      .copyright {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: $gray;
+
+        @media screen and (max-width: $mobileResolution) {
+          font-size: 13px;
+          br {
+            display: none;
+          }
+          text-align: left;
+          justify-content: left;
+          p {
+            text-align: left !important;
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    .title {
+      font-weight: 700;
+      font-size: 24px;
+      color: rgba(0, 0, 0, 0.73);
+    }
+    .address {
+      max-width: 350px;
+      @media screen and (max-width: $mobileResolution) {
+        text-align: left;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .socialLinks {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobileResolution) {
+      justify-content: start;
+    }
+    .links {
+      position: relative;
+      height: 38px;
+      width: 38px;
+      margin-left: 50px;
+      margin-top: 25px;
+      @media screen and (max-width: $mobileResolution) {
+        margin-left: 0px;
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .terms {
+    padding-top: 20px;
+    @media screen and (max-width: $mobileResolution) {
+      padding-top: 80px;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (max-width: $mobileResolution) {
+        flex-direction: column-reverse;
+      }
+
+      a {
+        color: $secondary;
+        font-size: 15px;
+        line-height: 18px;
+        text-decoration-line: underline;
+        font-weight: 700;
+      }
+    }
+  }
+}

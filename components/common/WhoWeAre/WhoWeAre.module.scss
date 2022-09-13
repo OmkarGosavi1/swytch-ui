@@ -1,0 +1,287 @@
+@import "/styles/variables.scss";
+
+.container {
+  // padding: 2rem;
+
+  margin-top: 7rem;
+  padding-top: 0rem;
+  padding-bottom: 4rem;
+
+  @media screen and (max-width: $mobileResolution) {
+    padding: 0.5rem 1rem;
+    padding-bottom: 0;
+  }
+}
+.videoWrapper {
+  position: relative;
+  transform: scale(0.83);
+  top: -137px;
+  // background: red;
+  left: -40px;
+
+  video {
+    mix-blend-mode: darken;
+  }
+  @media screen and (max-width: 1300px) {
+    position: relative;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    top: -107.6px;
+    left: 50px;
+  }
+  @media screen and (max-width: $ipadProResolution) {
+    top: -40px;
+  }
+  @media screen and (max-width: $mobileResolution) {
+    position: relative;
+    left: unset;
+    top: 0px;
+    transform: scale(0.7);
+  }
+
+  video {
+    width: 100%;
+  }
+}
+.topSection2 {
+  // margin-top: 5rem;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
+  position: relative;
+
+  @media only screen and (max-width: $mobileResolution) {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    background: url("/images/products/who-we-are-bg.svg");
+    background-size: 100% 100%;
+    width: 820px;
+    height: 254px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: $mobileResolution) {
+      background: url("/images/products/who-we-are-mob.svg");
+      width: 100%;
+      top: 55px;
+      transform: unset;
+      background-size: contain;
+      height: 40px;
+      left: 0;
+      background-size: 100% 100%;
+      height: 60px;
+    }
+  }
+
+  .desc {
+    max-width: 1006px;
+    margin: 0 auto;
+    @media only screen and (max-width: $mobileResolution) {
+      font-size: 16px;
+      line-height: 17px;
+    }
+  }
+}
+
+.aboutUs {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  position: relative;
+  @media only screen and (max-width: $mobileResolution) {
+    margin-top: 2rem;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    background: url(/images/products/about-us.svg);
+    background-size: 100% 100%;
+    width: 770px;
+    height: 254px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    top: -100px;
+
+    @media only screen and (max-width: $mobileResolution) {
+      background: url(/images/products/about-us.svg);
+      width: 80%;
+      top: -15px;
+      -webkit-transform: unset;
+      transform: unset;
+      background-size: 100% 100%;
+      height: 40px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+    }
+  }
+
+  .desc {
+    line-height: 33px;
+    @media only screen and (max-width: $mobileResolution) {
+      font-size: 16px;
+      line-height: 17px;
+      text-align: center;
+    }
+  }
+
+  .workFlow {
+    padding-top: 9rem;
+    h1 {
+      text-align: right;
+      margin-top: -6rem;
+    }
+    .blackText {
+      padding-top: 3rem;
+      font-size: 28px;
+      font-weight: 300;
+      color: $secondary;
+      text-align: right;
+      line-height: 33px;
+
+      @media screen and (max-width: 1300px) {
+        margin-top: -3rem;
+      }
+      @media screen and (max-width: $mobileResolution) {
+        margin-top: 3rem;
+      }
+
+      &:after {
+        // content: "";
+        // display: inline-block;
+        // height: 0.5em;
+        // width: 100%;
+        // margin-left: -100%;
+        // margin-right:10px  ;
+        // border-top: 1.5px solid $primary;
+        // position: relative;
+        // top: 0;
+        // max-width:2000px;
+        // margin: 0 auto;
+      }
+    }
+  }
+  .buttonsWrapper {
+    @media screen and (max-width: $mobileResolution) {
+      // flex-wrap: wrap;
+      display:flex;
+      flex-direction: column;
+      margin: auto;
+      width: 80%;
+      margin-top: 2rem !important;
+    }
+    .mobileBtn {
+      width: 100%;
+      @media screen and (max-width: $mobileResolution) {
+        text-align: center;
+      }
+      div {
+        @media screen and (max-width: $mobileResolution) {
+          margin: 0.7rem 0 !important;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .blocksWrapper {
+    max-width: 1178px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 8rem;
+
+    .blockSingle {
+      flex-basis: 30%;
+      margin-right: 4.3%;
+      margin-bottom: 4rem;
+
+      &:nth-of-type(3n) {
+        margin-right: 0 !important;
+      }
+      @media only screen and (max-width: $ipadProResolution) {
+        flex-basis: 47%;
+        margin-right: 3%;
+        &:nth-of-type(3n) {
+          margin-right: 0;
+          margin-right: 3% !important;
+        }
+      }
+      @media only screen and (max-width: $mobileResolution) {
+        flex-basis: 100%;
+        margin-right: 0 !important;
+      }
+
+      &:nth-of-type(1) {
+        // margin-right: 0;
+        @media only screen and (max-width: $mobileResolution) {
+          .right {
+            right: calc(50% - 120px) !important;
+            // transform: translateX(-50%);
+          }
+        }
+      }
+
+      .topSection {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: $mobileResolution) {
+          justify-content: center;
+          position: relative;
+        }
+        .left {
+          .imgWrapper {
+            position: relative;
+            width: 38px;
+            height: 38px;
+          }
+          .title {
+            font-weight: 600;
+            font-size: 1.4rem;
+          }
+        }
+        .right {
+          font-size: 100px;
+          font-size: 100px;
+          line-height: 0.6;
+          opacity: 0.55;
+          padding-right: 2rem;
+
+          @media only screen and (max-width: $mobileResolution) {
+            font-size: 100px;
+            font-size: 100px;
+            line-height: 0.6;
+            opacity: 0.45;
+            padding-right: 2rem;
+            position: absolute;
+            right: -12px;
+            top: 11px;
+            z-index: -1;
+            right: calc(50% - 196px);
+          }
+        }
+      }
+
+      .desc {
+        margin-top: 5px;
+        font-size: 20px;
+        line-height: 24px;
+        @media only screen and (max-width: $mobileResolution) {
+          max-width: 80%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import "/styles/variables.scss";
+
+.container {
+  width: 100%;
+  padding: 4rem 0 0rem 0;
+
+  .heading{
+    padding-right: 4vw;
+    p{
+    text-align:right;
+    font-size: 60px;
+    }
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    .partnersCol {
+      width: 40%;
+      display: flex;
+      // align-items: center;
+      // justify-content: center;
+      // padding: 0 3%;
+      // text-align: center;
+
+      .content{
+        .subheading{
+         h2{
+          color:$secondary;
+          text-align: right;
+          max-width: 36vw;
+          font-size: 28px;
+         }
+        }
+      }
+      
+     
+      
+
+      @media screen and (max-width: $ipadProResolution) {
+        width: 100%;
+        margin-bottom: 2rem;
+        .content {
+          br {
+            display: none;
+          }
+          .heading {
+            p {
+              text-align: right;
+            }
+          }
+          .subheading{
+           h2{
+            max-width:100%;
+            text-align: center;
+           }
+
+          }
+        }
+      }
+    }
+    .logoCol {
+      width:60%;
+      @media screen and (max-width: $ipadProResolution) {
+        width: 100%;
+      }
+
+      &.w100 {
+        width: 100%;
+      }
+    }
+  }
+  .slideCustom {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: $mobileResolution) {
+      height: 14rem;
+      padding: 14%;
+    }
+    @media screen and (max-width: $mobileResolution) {
+      height: 9rem;
+    }
+    &.white {
+      background: white;
+    }
+    &.grey {
+      background: $lightGray;
+    }
+    .imgWrapper {
+      position: relative;
+      width: 100%;
+      height: 1.5rem;
+      @media screen and (max-width: $mobileResolution) {
+        height: 2rem;
+      }
+      text-align: center;
+      &.big {
+        height: 5rem;
+        @media screen and (max-width: $mobileResolution) {
+          height: 4rem;
+        }
+      }
+      &.small {
+        height: 2rem;
+      }
+    }
+  }
+}

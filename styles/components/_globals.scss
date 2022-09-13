@@ -1,0 +1,420 @@
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-default;
+  // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  // overflow-x: hidden;
+  // font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  color: $gray;
+  // color: #fff;
+  // background: #000;
+  &:not(.page-loaded) {
+    // overflow: hidden;
+  }
+}
+body {
+  line-height: 1.2;
+}
+
+#__next {
+  overflow-x: hidden;
+}
+
+main {
+  // padding-top: 10rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+.position-r {
+  position: relative;
+  z-index: 2;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: $primary;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+.top-spacer {
+  padding-top: 12rem;
+  @media screen and (max-width: $mobileResolution) {
+    padding-top: 4rem;
+  }
+}
+
+#nprogress {
+  z-index: 10000;
+}
+// style for loader
+#nprogress .bar {
+  background: #000 !important;
+  height: 0.2rem;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px #000, 0 0 5px #000;
+}
+/* I made these changes in nprogress.css */
+#nprogress .bar {
+  height: 3px;
+}
+#nprogress .spinner-icon {
+  width: 25px;
+  height: 25px;
+  border: solid 3px transparent;
+}
+.ant-collapse {
+  background-color: transparent;
+  border: 1px solid #222222;
+  > .ant-collapse-item {
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.defaut-collapse {
+  .ant-collapse-content {
+    background-color: transparent;
+    color: #fff;
+  }
+  .ant-collapse-header {
+    background-color: transparent;
+    color: #fff !important;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }
+  &.ant-collapse {
+    > .ant-collapse-item {
+      margin-bottom: 0;
+    }
+  }
+  .anticon {
+    svg {
+      font-size: 1.5rem !important;
+      opacity: 0.7;
+    }
+  }
+}
+
+.newsletter {
+  .ant-form-item-explain-error {
+    // color: #fff !important;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+    opacity: 0.7;
+  }
+  .ant-form-item-control-input {
+    margin-bottom: 0.7rem;
+  }
+  input {
+    background-color: transparent !important;
+    &:-webkit-autofill {
+      -webkit-text-fill-color: #fff !important;
+    }
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #000 inset !important;
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    // border: 1px solid green;
+    // -webkit-text-fill-color: green;
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+.only-desktop {
+  @media screen and (max-width: 767px) {
+    display: none !important;
+  }
+}
+.only-mobile {
+  @media screen and (min-width: 768px) {
+    display: none !important;
+  }
+}
+
+.modal-video-close-btn {
+  cursor: pointer;
+}
+
+.boxed {
+  padding-left: 6vw;
+  padding-right: 6vw;
+  max-width: 2000px;
+  margin: 0 auto;
+  &.p-0 {
+    padding: 0;
+  }
+
+  @media only screen and (min-width: 2000px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @media only screen and (max-width: $mobileResolution) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.partners-slider {
+  .swiper-slide {
+    width: 18rem;
+  }
+}
+
+.product-slider {
+  // .swiper-container {
+  //   position: relative;
+  //   width: 90vw;
+  //   height: 300px;
+  // }
+  // .swiper-container > .swiper-slide__content {
+  //   position: absolute;
+  //   top: 0;
+  // }
+
+  &.swiper {
+    @media only screen and (max-width: $mobileResolution) {
+      min-height: 38vh;
+    }
+  }
+  .swiper-slide {
+    display: flex;
+    // background: #eee;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms linear;
+    transform: scale(0.8);
+
+    .slideContent {
+      opacity: 1;
+      bottom: 2px;
+      position: absolute;
+      // background: red;
+      transition: all 700ms linear;
+      padding: 1rem;
+      .textWrapper {
+        opacity: 0;
+        transition: all 700ms linear;
+      }
+      .logoWrapper {
+        opacity: 0;
+        position: relative;
+        height: 60px;
+        width: 130px;
+        // top: 58px;
+        z-index: 6;
+        margin-bottom: 0.5rem;
+        left: 0;
+        // left: -73px;
+        // transition: all 700ms linear;
+      }
+    }
+
+    .blur {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(
+        180deg,
+        rgba(20, 20, 20, 0.15592174369747902) 36%,
+        rgba(34, 33, 22, 1) 87%
+      );
+      z-index: 1;
+      transition: all 700ms linear;
+    }
+
+    &.swiper-slide-active {
+      transform: scale(1);
+      // background: #fc0;
+      transition: all 500ms;
+      position: relative;
+      // border: 10px solid #6a51d2;
+      // box-shadow: 0 0 0 10px #f3f5f6 inset;
+      // box-sizing: border-box;
+      padding: 0.8rem;
+      @media only screen and (max-width: $mobileResolution) {
+        padding: 0.3rem;
+      }
+      .slideContent {
+        opacity: 1;
+        transition: all 700ms linear;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: 100% 100%;
+        background-image: url("/images/icons/border.png");
+      }
+
+      .logoWrapper {
+        opacity: 1;
+        transition: all 700ms linear;
+      }
+      .blur {
+        opacity: 1;
+        transition: all 700ms linear;
+      }
+      .textWrapper {
+        opacity: 1;
+        transition: all 700ms linear;
+      }
+    }
+  }
+  .swiper-slide__content {
+    height: 23vw;
+  }
+}
+.service-slider {
+  .swiper-slide-active {
+    // transform: scale(1.1);
+    .card {
+      background: #fe621d !important;
+      transform: all 1.5s;
+      .title {
+        color: #fff !important;
+        transform: all 1.5s;
+      }
+      .desc {
+        color: #fff !important;
+        transform: all 1.5s;
+      }
+      img {
+        filter: brightness(0) invert(1);
+        transform: all 1.5s;
+      }
+    }
+  }
+}
+
+.queries {
+  border: 0;
+
+  .ant-collapse-item {
+    box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.25);
+    margin-bottom: 40px;
+    .ant-collapse-header {
+      // box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.25);
+      padding: 30px;
+
+      .ant-collapse-header-text {
+        color: $primary;
+        font-weight: 700;
+        font-size: 28px;
+        text-align: start;
+
+        @media only screen and (max-width: $mobileResolution) {
+          font-size: 20px;
+        }
+      }
+      .ant-collapse-content {
+        .ant-collapse-content-box {
+          p {
+            font-weight: 400;
+            font-size: 24px;
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.conatct-wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.ant-form-item-control-input-content {
+  text-align: center;
+}
+.ant-input:placeholder-shown {
+  color: #000;
+  text-overflow: ellipsis;
+  background: #f7f7f7;
+  border: 0.1px solid !important;
+  padding-left: 14px;
+}
+.ant-input::placeholder {
+  color: #000;
+}
+
+.ant-input {
+  // border: none;
+  border: 1px solid rgb(0 0 0 / 33%) !important;
+  background: transparent;
+  color: #000000;
+  font-size: 0.9rem;
+  padding-left: 15px;
+
+  &:focus {
+    border: 1px solid red;
+    background: #f7f7f7;
+    color: #000;
+    // color: #ffffff;
+  }
+}
+.ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+  padding-left: 14px;
+  color: #000;
+}
+.ant-input::placeholder {
+  // color: #ffffffbd;
+  position: relative;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border: 0.1px solid !important;
+  // border-bottom: 1px solid #ffffff54;
+  border-radius: unset !important;
+  background: #f7f7f7;
+  padding: 0;
+}
+.ant-form-item-has-error
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+.ant-form-item-has-error
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover,
+.ant-form-item-has-error
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:focus {
+  background: transparent;
+  box-shadow: unset;
+}
+
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item,
+.ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+  padding-left: 14px;
+  color: #000;
+  font-size: 14px;
+}
+.ant-form-item-has-error
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
+  border-color: transparent;
+}

@@ -1,0 +1,264 @@
+@import "/styles/variables.scss";
+
+.container {
+  // padding: 2rem;
+
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+
+  @media screen and (max-width: $mobileResolution) {
+    padding: 0.5rem 1rem;
+    padding-bottom: 0;
+    margin-top: 1rem;
+    margin-bottom: 8rem;
+  }
+}
+
+.topSection2 {
+  // margin-top: 5rem;
+  // padding-top: 12rem;
+  padding-bottom: 5rem;
+  position: relative;
+
+  @media only screen and (max-width: $mobileResolution) {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    background: url("/images/careers/careers.svg");
+    background-size: 100% 100%;
+    width: 820px;
+    height: 254px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20rem;
+    top: 0;
+    top: 40%;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: $mobileResolution) {
+      background: url("/images/careers/careers-mob.svg");
+      width: 100%;
+      top: 55px;
+      transform: unset;
+      background-size: contain;
+      height: 40px;
+      left: 0;
+      background-size: 100% 100%;
+      height: 60px;
+    }
+  }
+
+  .desc {
+    max-width: 1006px;
+    margin: 0 auto;
+    @media only screen and (max-width: $mobileResolution) {
+      font-size: 16px;
+      line-height: 17px;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+
+  @media only screen and (max-width: $mobileResolution) {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 49%;
+    // min-height: 400px;
+    box-shadow: -5px 4px 31px rgba(0, 0, 0, 0.05);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // justify-content: center;
+    // border: 1px solid red;
+
+    @media only screen and (max-width: $mobileResolution) {
+      width: 100%;
+      // padding: 0;
+      padding-top: 26px;
+      margin: 0 auto;
+
+      margin-bottom: 2rem;
+      width: 500px;
+      max-width: 90%;
+      background: #ffffff;
+      box-shadow: -5px 4px 31px rgba(0, 0, 0, 0.27);
+    }
+
+    &:nth-of-type(1) {
+      .title {
+        @media only screen and (max-width: 1535px) {
+          margin-bottom: 40px;
+        }
+        @media only screen and (max-width: 1280px) {
+          margin-bottom: inherit;
+        }
+        @media only screen and (max-width: $mobileResolution) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: 400;
+      color: $secondary;
+      // text-align: start;
+      font-family: $font-alternate;
+
+      @media only screen and (max-width: 1280px) and (min-width: 766px) {
+        font-size: 1.3rem;
+        line-height: 1.2;
+      }
+
+      @media only screen and (max-width: $mobileResolution) {
+        font-size: 15px;
+      }
+    }
+
+    .detail {
+      font-size: 22px;
+      font-weight: 500;
+      color: $gray;
+      text-align: start;
+      padding-top: 20px;
+      max-width: 41vw;
+
+      margin: 0 auto;
+      // padding-left:38px;
+
+      @media only screen and (max-width: 1280px) and (min-width: 766px) {
+        font-size: 18px;
+        line-height: 1.2;
+        padding-left: 0px;
+        padding-top: 25px;
+      }
+
+      @media only screen and (max-width: $mobileResolution) {
+        font-size: 14px;
+        max-width: 100%;
+        padding-top: 10px;
+      }
+    }
+
+    .points {
+      .pointers {
+        display: flex;
+        padding-top: 20px;
+
+        .arrowText {
+          font-weight: 700;
+          font-size: 22px;
+          color: #595959;
+          padding-left: 20px;
+          // text-align: start;
+          @media only screen and (max-width: 1280px) {
+            font-size: 20px;
+          }
+          @media only screen and (max-width: $mobileResolution) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .buttonsWrapper {
+      // margin-left: 0rem;
+      margin-left: auto;
+      margin-top: 10px;
+      @media screen and (max-width: $mobileResolution) {
+        margin: auto;
+        width: 100%;
+        margin-top: 2rem !important;
+      }
+      .mobileBtn {
+        width: 100%;
+        @media screen and (max-width: $mobileResolution) {
+          text-align: right;
+        }
+        .secondaryBtn {
+          @media screen and (max-width: $mobileResolution) {
+            margin: 0.7rem 0 !important;
+            text-align: start;
+            font-size: 12px;
+          }
+
+          &:hover {
+            background: linear-gradient(
+              95.14deg,
+              #fe621d 31.97%,
+              #feb21d 128.82%
+            );
+          }
+        }
+      }
+    }
+
+    .buttonsWrapperTwo {
+      margin-left: auto;
+      @media screen and (max-width: $mobileResolution) {
+        margin: auto;
+        width: 100%;
+        margin-top: 2rem !important;
+      }
+      .mobileBtn {
+        width: 100%;
+        @media screen and (max-width: $mobileResolution) {
+          text-align: right;
+        }
+        .secondaryBtn {
+          @media screen and (max-width: $mobileResolution) {
+            margin: 0.7rem 0 !important;
+            text-align: start;
+            font-size: 12px;
+          }
+
+          &:hover {
+            background: linear-gradient(
+              95.14deg,
+              #fe621d 31.97%,
+              #feb21d 128.82%
+            );
+          }
+        }
+      }
+    }
+  }
+  a {
+    z-index: 0;
+
+    &:before {
+      transition: all 0.1s ease;
+    }
+    &:hover {
+      &:before {
+        opacity: 0;
+        display: none;
+      }
+    }
+  }
+}
+.pointerWrapper {
+  position: relative;
+  min-width: 14px;
+  height: 14px;
+  margin-top: 6px;
+
+  @media only screen and (max-width: $mobileResolution) {
+    min-width: 12px;
+    height: 12px;
+    margin-top: 3px;
+  }
+}

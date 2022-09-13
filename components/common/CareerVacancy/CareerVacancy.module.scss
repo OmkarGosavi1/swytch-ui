@@ -1,0 +1,157 @@
+@import "/styles/variables.scss";
+
+.container {
+  // padding: 2rem;
+
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  padding-bottom: 18rem;
+
+  @media screen and (max-width: $mobileResolution) {
+    padding: 0.5rem 1rem;
+    padding-bottom: 0;
+  }
+}
+
+.topSection2 {
+  // margin-top: 5rem;
+  // padding-top: 12rem;
+  padding-bottom: 5rem;
+  position: relative;
+
+  @media only screen and (max-width: $mobileResolution) {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    background: url("/images/careers/careers.svg");
+    background-size: 100% 100%;
+    width: 820px;
+    height: 254px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 20rem;
+    top: 0;
+    top: 40%;
+    transform: translateY(-50%);
+
+    @media only screen and (max-width: $mobileResolution) {
+      background: url("/images/careers/careers-mob.svg");
+      width: 100%;
+      top: 55px;
+      transform: unset;
+      background-size: contain;
+      height: 40px;
+      left: 0;
+      background-size: 100% 100%;
+      height: 60px;
+    }
+  }
+
+  .desc {
+    max-width: 1006px;
+    margin: 0 auto;
+    @media only screen and (max-width: $mobileResolution) {
+      font-size: 16px;
+      line-height: 17px;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  padding-top: 11rem;
+
+  @media only screen and (max-width: $mobileResolution) {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+  }
+
+  .leftBlock {
+    font-family: $font-alternate;
+    font-weight: 400;
+    font-size: 42px;
+    color: $secondary;
+    line-height: 49px;
+    @media only screen and (max-width: $mobileResolution) {
+      font-size: 18px;
+      line-height: 21.13px;
+      max-width: 80vw;
+      margin: 0 auto;
+
+      text-align: center;
+    }
+  }
+
+  .rightBlock {
+    font-weight: 300;
+    font-size: 28px;
+    margin: 0 auto;
+
+    @media only screen and (max-width: $mobileResolution) {
+      font-size: 13px;
+      line-height: 16px;
+      max-width: 77vw;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 15px;
+      
+    }
+
+    .socialLinks {
+      display: flex;
+      justify-content: center;
+      @media only screen and (max-width: $mobileResolution) {
+        
+        padding-top: 17px;
+      }
+      .links {
+        position: relative;
+        height: 27px;
+        width: 27px;
+        padding-top: 15px;
+        margin-left: 18px;
+
+        @media only screen and (max-width: $mobileResolution) {
+          height: 17px;
+          width: 17px;
+          padding-top: 17px;
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      clear: both;
+      background: url("/images/careers/target.svg");
+      background-size: 100% 100%;
+      width: 800px;
+      height: 520px;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 38rem;
+      top: 0;
+      top: 68%;
+      transform: translateY(-50%);
+
+      @media only screen and (max-width: $mobileResolution) {
+        background: url("/images/careers/target-mob.svg");
+        width: 100%;
+        top: 50%;
+        transform: unset;
+        background-size: contain;
+        height: 385px;
+        left: 0;
+        background-size: 100% 100%;
+       
+      }
+    }
+  }
+}

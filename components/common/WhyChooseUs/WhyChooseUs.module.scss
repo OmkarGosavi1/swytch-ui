@@ -1,0 +1,231 @@
+@import "/styles/variables.scss";
+
+.container {
+  // padding: 2rem;
+
+  margin-top: 7rem;
+  padding-top: 0rem;
+  padding-bottom: 4rem;
+
+  @media screen and (max-width: $mobileResolution) {
+    padding: 0.5rem 1rem;
+    padding-bottom: 0;
+  }
+}
+// .videoWrapper {
+//   position: relative;
+//   transform: scale(0.83);
+//   top: -137px;
+//   // background: red;
+//   left: -40px;
+
+//   video {
+//     mix-blend-mode: darken;
+//   }
+//   @media screen and (max-width: 1300px) {
+//     position: relative;
+//     -webkit-transform: scale(0.9);
+//     transform: scale(0.9);
+//     top: -107.6px;
+//     left: 50px;
+//   }
+//   @media screen and (max-width: $ipadProResolution) {
+//     top: -40px;
+//   }
+//   @media screen and (max-width: $mobileResolution) {
+//     position: relative;
+//     left: unset;
+//     top: 0px;
+//     transform: scale(0.7);
+//   }
+
+//   video {
+//     width: 100%;
+//   }
+// }
+.topSection2 {
+  // margin-top: 5rem;
+  padding-top: 12rem;
+  padding-bottom: 5rem;
+  position: relative;
+
+  @media only screen and (max-width: $mobileResolution) {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+    background: url("/images/products/why-choose-us-bg.svg");
+    background-size: 100% 100%;
+    width: 820px;
+    height: 254px;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 2rem;
+    top: 1rem;
+
+    @media only screen and (max-width: $mobileResolution) {
+      background: url("/images/products/who-we-are-mob.svg");
+      width: 100%;
+      top: 55px;
+      transform: unset;
+      background-size: contain;
+      height: 40px;
+      left: 0;
+      background-size: 100% 100%;
+      height: 60px;
+    }
+  }
+
+  .desc {
+    max-width: 890px;
+    margin: 0 auto 0;
+    @media only screen and (max-width: $mobileResolution) {
+      font-size: 16px;
+      line-height: 17px;
+    }
+  }
+
+  .benefitTerm {
+    padding-top: 5rem;
+    text-align: left;
+
+    .info {
+      max-width: 55vw;
+    }
+  }
+
+  .defiDevelopment {
+    p {
+      text-align: right;
+    }
+    .subheading {
+      font-weight: 300;
+      font-size: 28px;
+      text-align: right;
+      max-width: 37vw;
+    }
+  }
+
+  .videoSection {
+    margin-top: 400px;
+    margin-bottom: 700px;
+    .videoWrapper {
+      position: relative;
+      background: #d9d9d9;
+      width: 100%;
+      min-height: 666px;
+      background-image: url("/images/layout/Sintel.jpg");
+      .playBtn {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        background: #fff0;
+        animation: ripple 1000ms infinite;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgb(255 255 255);
+        border-radius: 50%;
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 30%;
+        span {
+          display: block;
+          position: relative;
+          width: 0;
+          height: 0;
+          top: 50%;
+          left: 50%;
+          margin-top: -30px;
+          margin-left: -15px;
+          border-top: 30px solid #ffffff00;
+          border-left: 50px solid rgb(255 255 255);
+          border-bottom: 30px solid transparent;
+        }
+      }
+
+      .videoCard {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(25px);
+
+        left: 10%;
+        width: 85%;
+        // right:-10%;
+        top: 70%;
+        padding: 35px;
+
+        .firstLine {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          @media only screen and (max-width: $mobileResolution) {
+            flex-direction: column;
+          }
+
+          .logoWrapper {
+            position: relative;
+            height: 220px;
+            width: 280px;
+            img {
+            }
+          }
+
+          .firstRow {
+            font-weight: 400;
+            font-size: 91px;
+            line-height: 107px;
+            text-align: right;
+            font-family: $font-alternate;
+            color: $secondary;
+
+            .brand {
+              color: $primary;
+            }
+          }
+        }
+
+        .secBlock {
+          padding-top: 50px;
+          font-weight: 300;
+          font-size: 34px;
+          line-height: 40px;
+          text-align: right;
+          color: $gray;
+        }
+
+        .thirdBlock {
+          font-weight: 300;
+          font-size: 35px;
+          line-height: 41px;
+          text-align: right;
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0px #fff0, 0 0 0 0px #fff, 0 0 0 0px #fff0, 0 0 0 0px #fff,
+      0 0 0 0px #fff0, 0 0 0 0px #fff, 0 0 0 0px #fff0, 0 0 0 0px #fff;
+  }
+  100% {
+    box-shadow: 0 0 0 15px rgb(255 255 255 / 0%),
+      0 0 0 17px rgb(255 255 255 / 0%), 0 0 0 40px rgb(255 255 255 / 0%),
+      0 0 0 42px rgb(255 255 255 / 0%), 0 0 0 70px rgb(255 255 255 / 0%),
+      0 0 0 72px rgb(255 255 255 / 0%), 0 0 0 105px rgb(255 255 255 / 0%),
+      0 0 0 107px rgb(255 255 255 / 0%);
+  }
+}

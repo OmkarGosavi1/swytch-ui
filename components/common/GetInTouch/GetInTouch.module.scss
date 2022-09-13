@@ -1,0 +1,39 @@
+@import "/styles/variables.scss";
+
+.container {
+  padding-top: 14rem;
+  padding-bottom: 5rem;
+
+  @media screen and (max-width: $mobileResolution) {
+    // padding: 3.5rem 1rem;
+  }
+
+  h1 {
+    max-width: 620px;
+  }
+
+  .imgWrapper {
+    position: absolute;
+    width: 540px;
+    height: 540px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+  }
+
+  .secContainer {
+    padding: 2.3rem 4rem;
+    background-color: #030507;
+
+    .content {
+      text-align: right;
+
+      .text {
+        // font-size: 28px;
+        max-width: 380px;
+        margin-bottom: 1.8rem;
+        margin-left: auto;
+      }
+    }
+  }
+}

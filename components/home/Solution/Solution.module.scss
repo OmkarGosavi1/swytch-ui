@@ -1,0 +1,29 @@
+@import "/styles/variables.scss";
+
+.container {
+  padding-top: 6rem;
+  padding-bottom: 0rem;
+
+  @media screen and (max-width: $ipadProResolution) {
+    padding-top: 6rem;
+  }
+
+  @media screen and (max-width: $mobileResolution) {
+    padding-top: 2rem;
+  }
+
+  .row{
+    display: flex;
+    justify-content: space-between;
+
+
+    
+
+    .subheading{
+      text-align: right;
+    }
+  }
+
+
+
+}

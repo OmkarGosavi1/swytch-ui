@@ -1,0 +1,400 @@
+.gradientBg {
+  background: linear-gradient(270deg, #3076ff -20.75%, #52fff4 115.44%);
+}
+
+.gradientBg2 {
+  background: linear-gradient(90deg, #3076ff -15.41%, #52fff4 114.47%);
+}
+
+.c-padding {
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.bgGray {
+  background: #111111;
+}
+
+.btn-primary {
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  background: $primary;
+  border-radius: 7px;
+  text-transform: capitalize;
+  padding: 0.8rem 1.65rem;
+  font-family: $font-alternate;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in;
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 4px;
+  //   bottom: 0;
+  //   background: transparent;
+  //   border: 1px solid $primary;
+  //   z-index: -1;
+  //   width: 100%;
+  //   right: -4px;
+  //   height: 100%;
+  //   border-radius: 7px;
+  //   transition: all 0.3s ease-in;
+  //   // width: 200px;
+  //   // height: 60px;
+  // }
+  &:hover {
+    transition: all 0.1s ease-in;
+    // left: 2px;
+    // bottom: -2px;
+    &::before {
+      // transition: all 0.1s ease-in;
+      // left: 0px;
+      // right: 0px;
+      // top: 0px;
+    }
+  }
+  @media only screen and (max-width: $mobileResolution) {
+    padding: 0.7rem 2.1rem;
+    font-size: 13px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 12px;
+    padding: 0.7rem 0.6rem;
+  }
+  a:hover {
+    color: #fff;
+  }
+
+  &:hover {
+    background: $primary;
+    color: #fff;
+  }
+  &:active,
+  &:visited {
+    background: $primary;
+    color: #fff;
+  }
+}
+
+.btn-secondary {
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  background: $secondary;
+  border-radius: 7px;
+  text-transform: capitalize;
+  padding: 0.8rem 1.65rem;
+  font-family: $font-alternate;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    bottom: 0;
+    background: transparent;
+    border: 1px solid $secondary;
+    z-index: -1;
+    width: 100%;
+    right: -4px;
+    height: 100%;
+    border-radius: 7px;
+    transition: all 0.3s ease-in;
+    // width: 200px;
+    // height: 60px;
+  }
+  &:hover {
+    transition: all 0.1s ease-in;
+    left: 2px;
+    bottom: -2px;
+    &::before {
+      transition: all 0.1s ease-in;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+    }
+  }
+
+  @media only screen and (max-width: $mobileResolution) {
+    padding: 0.7rem 2.1rem;
+  }
+
+  @media only screen and (max-width: $mobileResolution) {
+    font-size: 13px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 12px;
+    padding: 0.7rem 0.6rem;
+  }
+  a:hover {
+    color: #fff;
+  }
+
+  &:hover {
+    background: $secondary;
+    color: #fff;
+  }
+  &:active,
+  &:visited {
+    background: $secondary;
+    color: #fff;
+  }
+}
+
+.btn-gray {
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  background: $gray;
+  border-radius: 7px;
+  text-transform: capitalize;
+  padding: 0.8rem 1.65rem;
+  font-family: $font-alternate;
+  display: inline-block;
+  cursor: pointer;
+  @media only screen and (max-width: $mobileResolution) {
+    padding: 0.7rem 0.9rem;
+  }
+
+  @media only screen and (max-width: $mobileResolution) {
+    font-size: 13px;
+  }
+
+  @media only screen and (max-width: 360px) {
+    font-size: 12px;
+    padding: 0.7rem 0.6rem;
+  }
+  a:hover {
+    color: #fff;
+  }
+
+  &:hover {
+    background: $gray;
+    color: #fff;
+  }
+  &:active,
+  &:visited {
+    background: $gray;
+    color: #fff;
+  }
+}
+
+.white {
+  color: #fff;
+}
+
+.h1 {
+  font-size: $h1;
+  &.line1 {
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 0.5em;
+      vertical-align: bottom;
+      width: 100%;
+      margin-right: -100%;
+      margin-left: 10px;
+      border-top: 1.5px solid $primary;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  @media screen and (max-width: $ipadProResolution) {
+    font-size: 32px;
+  }
+  @media only screen and (max-width: $mobileResolution) {
+    width: 19rem;
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+    br {
+      display: none;
+    }
+  }
+}
+
+.h2 {
+  font-size: $h2;
+  text-align: left;
+  position: relative;
+  // overflow: hidden;
+  span {
+    // background: white;
+  }
+
+  &.line2 {
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 0.5em;
+      vertical-align: bottom;
+      width: 100%;
+      margin-right: -100%;
+      margin-left: 10px;
+      border-top: 1.5px solid $primary;
+      position: relative;
+      top: 5px;
+    }
+  }
+  @media screen and (max-width: $ipadProResolution) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: $mobileResolution) {
+    // width: 19rem;
+    margin: auto;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 0.4rem;
+  }
+}
+
+.h4 {
+  span {
+    background: white;
+    z-index: 5;
+    position: relative;
+    padding-left: 11px;
+  }
+  &.line4 {
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 0.5em;
+      vertical-align: bottom;
+      width: 100%;
+      margin-right: -100%;
+      margin-left: 10px;
+      border-top: 1.5px solid $primary;
+      position: relative;
+      top: 5px;
+    }
+  }
+  &.line4-left {
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 0.5em;
+      vertical-align: bottom;
+      width: 130%;
+      margin-left: -130%;
+      margin-right: 10px;
+      border-top: 1.5px solid $primary;
+      position: relative;
+      top: 5px;
+    }
+  }
+}
+.text-left {
+  text-align: left;
+}
+
+.c-primary {
+  color: $primary;
+}
+
+.c-white {
+  color: #fff;
+}
+
+.c-black {
+  color: #000;
+}
+
+.c-secondary {
+  color: $secondary;
+}
+
+.bg-secondary {
+  background: $secondary !important;
+}
+
+.bg-gray {
+  background: $gray;
+}
+
+.f-konexy {
+  font-family: $font-alternate;
+}
+
+.f-jura {
+  font-family: $font-default;
+}
+
+.f31 {
+  font-size: 31px;
+}
+
+.f26 {
+  font-size: 26px;
+}
+
+.fip26 {
+  @media only screen and (max-width: $ipadProResolution) {
+    font-size: 18px;
+  }
+}
+
+.fm14 {
+  @media only screen and (max-width: $mobileResolution) {
+    font-size: 14px !important;
+    line-height: 16.56px !important;
+  }
+}
+
+.f18 {
+  font-size: 18px;
+}
+
+.mtc {
+  @media only screen and (max-width: $mobileResolution) {
+    text-align: center !important;
+  }
+}
+
+.mob-mb1 {
+  @media only screen and (max-width: $mobileResolution) {
+    margin-bottom: 1rem;
+  }
+}
+
+.mob-mb2 {
+  @media only screen and (max-width: $mobileResolution) {
+    margin-bottom: 2rem;
+  }
+}
+
+.f28 {
+  font-size: 28px;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+
+.fw400 {
+  font-weight: 400;
+}
+
+.z-1 {
+  position: relative;
+  z-index: 1;
+}
+.z-2 {
+  position: relative;
+  z-index: 2;
+}

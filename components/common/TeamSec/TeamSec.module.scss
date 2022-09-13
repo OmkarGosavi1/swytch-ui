@@ -1,0 +1,186 @@
+@import "/styles/variables.scss";
+
+.container {
+  // padding-top: 9rem;
+  padding-bottom: 5rem;
+  text-align: center;
+
+  .row {
+    display: flex;
+    justify-content: center;
+
+    .topSection2 {
+      h1 {
+        text-align: start;
+        font-size: 40px;
+        padding-top: 10rem;
+
+        @media screen and (max-width: $mobileResolution) {
+          font-size: 15px;
+          padding-top: 5rem;
+        }
+      }
+
+      .desc {
+        text-align: start;
+        padding-top: 2rem;
+        @media screen and (max-width: $mobileResolution) {
+          font-size: 14px;
+          padding-top: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .teamWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    // position:relative;
+    // margin-bottom: 1rem;
+
+    @media screen and (max-width: $mobileResolution) {
+      // justify-content: left;
+    }
+
+    .item {
+      position: relative;
+      text-align: center;
+      // flex: 0 0 33.33%;
+      width: 30.33%;
+      padding: 0em;
+      margin: 30px 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      @media screen and (max-width: $mobileResolution) {
+        // flex: 0 0 100%;
+        width: 40%;
+        // padding: 0.4rem;
+        font-size: 0.8rem;
+        // margin-bottom: 1.5rem;
+        margin: 4px 14px;
+      }
+
+      .imgWrapper {
+        position: relative;
+        width: 100%;
+        height: 380px;
+        z-index: 1;
+
+        @media screen and (max-width: $mobileResolution) {
+          height: 165px;
+        }
+        // transition: all 2s;
+        &:before {
+          content: "";
+          transition: all 0.4s;
+          position: absolute;
+          bottom: 10%;
+          left: 0px;
+          right: 0;
+          bottom: 0px;
+          margin: 0 auto;
+          height: 60%;
+          width: 100%;
+          z-index: 999;
+          background: linear-gradient(
+            0.41deg,
+            rgba(254, 98, 29, 0.84) 5.18%,
+            rgba(255, 255, 255, 0) 54.92%
+          );
+          opacity: 0;
+          // filter:blur(1px);
+          // display: block;
+
+          @media screen and (max-width: $mobileResolution) {
+          }
+        }
+        &:hover {
+          @media screen and (min-width: 1000px) {
+            &:before {
+              opacity: 0.9;
+              transition: all 0.4s;
+            }
+          }
+          //   .name {
+          //     display: block;
+          //   }
+          //   .designation {
+          //     display: block;
+          //   }
+        }
+      }
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        color: #ffffff;
+        z-index: 1;
+        bottom: 23px;
+        opacity: 0;
+        transition: all 0.3s;
+        // display: none;
+        pointer-events: none;
+        @media screen and (max-width: $mobileResolution) {
+          position: relative;
+          bottom: 0;
+          opacity: 1;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .imgWrapper {
+        &:hover + .details {
+          opacity: 1;
+          transition: all 0.3s;
+          //   z-index:1;
+          // display:block;
+        }
+      }
+    }
+  }
+
+  .designation {
+    // position: absolute;
+    // bottom: 10%;
+    text-align: center;
+
+    display: block;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    // display: none;
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 0.8rem;
+      color: $secondary;
+    }
+  }
+  .name {
+    // position: absolute;
+    // bottom: 15%;
+
+    text-align: center;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    // display: none;
+
+    // display: none;
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 0.8rem;
+      color: $secondary;
+      font-family: $font-alternate;
+    }
+  }
+}

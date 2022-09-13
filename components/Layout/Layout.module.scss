@@ -1,0 +1,98 @@
+@import "/styles/variables.scss";
+
+.container {
+  //   background-color: #000;
+  // height: 100vh;
+  // overflow: hidden;
+  .bgImageWrapper {
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    overflow: hidden;
+    @media screen and (max-width: $mobileResolution) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $primary;
+    }
+  }
+  .bgAnimation {
+  }
+  .bgImage {
+    animation: ratateBg 25s linear infinite;
+    @media screen and (max-width: $mobileResolution) {
+      animation: ratateBgMobile 25s linear infinite;
+    }
+  }
+}
+
+.sidebarMenu {
+  background: black;
+  position: fixed;
+  // top: 0;
+  right: 0;
+  z-index: 998;
+  transform: translate(100%, 0%);
+  transition: all 0.3s;
+  &:before {
+    content: "";
+    position: absolute;
+    background: #191717ad;
+    // left: -330px;
+    width: 200vw;
+    right: 0;
+    height: 500vh;
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  &.active {
+    transform: translate(0%, 0%);
+    &::before {
+      opacity: 1;
+      visibility: unset;
+    }
+  }
+}
+.close {
+  width: 50px;
+  height: 50px;
+  font-size: 26px;
+  position: absolute;
+  right: 0;
+  z-index: 99999;
+  display: none;
+  top: 1rem;
+  right: 1rem;
+  opacity: 0.5;
+  cursor: pointer;
+  img {
+    filter: brightness(0%);
+  }
+  &.active {
+    display: block;
+  }
+}
+
+@keyframes ratateBg {
+  0% {
+    transform: scale(2) rotate(0deg);
+  }
+  100% {
+    transform: scale(2) rotate(360deg);
+  }
+}
+@keyframes ratateBgMobile {
+  0% {
+    transform: scale(3) rotate(0deg);
+  }
+  100% {
+    transform: scale(3) rotate(360deg);
+  }
+}

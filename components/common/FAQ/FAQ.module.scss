@@ -1,0 +1,45 @@
+@import "/styles/variables.scss";
+// @import '~antd/dist/antd.css';
+
+.question {
+  padding-top: 3rem;
+
+  .minus {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 1.7rem !important;
+    color: $primary;
+    @media only screen and (max-width: $mobileResolution) {
+      font-size: 1rem !important;
+      
+    }
+  }
+
+  .plus{
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 1.7rem !important;
+    color: $secondary;
+    @media only screen and (max-width: $mobileResolution) {
+      font-size: 1rem !important;
+      
+    }
+
+  }
+}
+
+.topSection {
+  padding-bottom: 70px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 24px;
+  color: $secondary;
+  padding-left:55px;
+
+  @media only screen and (max-width: $mobileResolution) {
+    font-size: 16px;
+    padding-left: 0px;
+  }
+}

@@ -1,0 +1,149 @@
+@import "/styles/variables.scss";
+
+.container {
+  max-width: 500px;
+  @media screen and (max-width: $mobileResolution) {
+    margin-bottom: 2rem;
+  }
+  .heading {
+    color: #fff;
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  .form {
+    position: relative;
+
+    input {
+      // border: 0 !important;
+      // border: 2px solid #fff !important;
+      border: 1px solid transparent !important;
+      padding-right: 200px;
+      color: #000 !important;
+      box-shadow: none !important;
+      font-size: 14px;
+      height: 52px !important;
+      padding-left: 21px !important;
+      text-shadow: none !important;
+
+      @media screen and (max-width: $mobileResolution) {
+        font-size: 13px;
+        padding-right: unset;
+      }
+
+      &::placeholder {
+        color: #000 !important;
+        opacity: 0.7 !important;
+        font-family: $font-alternate;
+      }
+    }
+  }
+  .btn {
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    height: 52px;
+    padding: 0;
+    position: absolute;
+    right: -2px;
+    top: 0;
+    padding-left: 2.7rem;
+    padding-right: 2.7rem;
+    font-size: 14px;
+    border-radius: 0;
+    margin-right: 3px;
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 15px;
+    background: #1a1f28;
+    border-radius: 7px;
+    text-transform: capitalize;
+    transition: all 0.2s;
+    z-index: 9;
+
+    &.btn2 {
+      background: transparent;
+      border: 1px solid #000000;
+      top: 4px;
+      right: -5px;
+      transition: all 0.2s;
+      opacity: 1;
+      z-index: 8;
+      @media screen and (max-width: $mobileResolution) {
+        display: none;
+      }
+      span {
+        color: transparent;
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      right: -3px;
+      top: 2px;
+      &.btn2 {
+        opacity: 0;
+      }
+    }
+
+    &:hover + .btn2 {
+      opacity: 0;
+    }
+
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 10px;
+    }
+
+    &::before {
+      display: none !important;
+    }
+    span {
+      color: #ffffff;
+      font-family: $font-alternate;
+    }
+    // .hidden {
+    //   visibility: hidden;
+    // }
+    // height: 1rem;
+  }
+  .checkbox {
+    color: #fff;
+  }
+  .animateText {
+    animation: wobble 1s ease;
+  }
+  @keyframes wobble {
+    0% {
+      transform: skewX(-9deg);
+    }
+    10% {
+      transform: skewX(8deg);
+    }
+    20% {
+      transform: skewX(-7deg);
+    }
+    30% {
+      transform: skewX(6deg);
+    }
+    40% {
+      transform: skewX(-5deg);
+    }
+    50% {
+      transform: skewX(4deg);
+    }
+    60% {
+      transform: skewX(-3deg);
+    }
+    70% {
+      transform: skewX(2deg);
+    }
+    80% {
+      transform: skewX(-1deg);
+    }
+    90% {
+      transform: skewX(0deg);
+    }
+  }
+}

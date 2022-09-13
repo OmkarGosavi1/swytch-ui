@@ -1,0 +1,35 @@
+{
+
+	
+
+	"React Div": {
+		"prefix": "rdiv",
+		"body": "<div className={`${s.${0}}`}></div>",
+		"description": "Add a react div with class name in react format"
+	},
+	"React Link": {
+		"prefix": "rlink",
+		"body": "<Link href='#'><a><div className={`${s.${0}}`}></div></a></Link>",
+		"description": "Add a react div with class name in react format"
+	},
+	"Flex center": {
+		"prefix": "fc",
+		"body": "display: flex; justify-content:center; align-items: center;",
+		"description": "Display flex center"
+	},
+	"Image component with Wrapper": {
+		"prefix": "rimg",
+		"body": "<div className={s.imgWrapper}><Image src={${0}} alt='${1}' layout='fill' /></div>",
+		"description": "Display flex center"
+	},
+	"Media Query Ipad Pro (1024px)": {
+		"prefix": "mq1024",
+		"body": "@media only screen and (max-width: $ipadProResolution){}",
+		"description": "Media Query for Ipad Pro Resolution 1024 px"
+	},
+	"Media Query Ipad Pro (767px)": {
+		"prefix": "mq767",
+		"body": "@media only screen and (max-width: $mobileResolution){}",
+		"description": "Media Query for Ipad Pro Resolution 767 px"
+	},
+}

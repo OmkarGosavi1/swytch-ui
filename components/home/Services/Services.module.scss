@@ -1,0 +1,155 @@
+@import "/styles/variables.scss";
+
+.container {
+  // height: 500px;
+  margin-top: 5rem;
+  margin-bottom: 7rem;
+  @media screen and (max-width: $mobileResolution) {
+    margin-bottom: 0rem;
+  }
+  .row {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobileResolution) {
+      display: block;
+      text-align: center;
+      margin-bottom: 67px;
+      br {
+        display: none;
+      }
+    }
+
+    .heading {
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+        background: url("/images/textService.png");
+        background-size: contain;
+        width: 1053px;
+        height: 254px;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: -5rem;
+        top: 0;
+        top: -100px;
+      }
+    }
+    .deatails {
+      text-align: right;
+      @media screen and (max-width: $mobileResolution) {
+        text-align: center;
+      }
+    }
+  }
+  .slider {
+    .slideCustom {
+      width: 95%;
+      .card {
+        // display: flex;
+        // justify-content: center;
+        background: white;
+        padding: 50px 25px;
+        position: relative;
+        box-shadow: -6px 9px 8px rgb(0 0 0 / 3%);
+        border-radius: 0;
+        transition: all 1.5s;
+        min-height: 560px;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: $mobileResolution) {
+          min-height: 505px;
+        }
+        &::after {
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 100%;
+          background: $primary;
+        }
+        .title {
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 43px;
+          color: #000000;
+          margin-top: 35px;
+          margin-bottom: 35px;
+          transform: all 1.5s;
+          @media screen and (max-width: $mobileResolution) {
+            font-size: 30px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+        }
+        .desc {
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 33px;
+          color: #a0a0a0;
+          margin-bottom: 25px;
+        }
+        .logoWrapper {
+          position: relative;
+          width: 86px;
+          height: 108px;
+          @media screen and (max-width: $mobileResolution) {
+            width: 54px;
+            height: 57px;
+          }
+        }
+
+        .arrow {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          bottom: 30px;
+        }
+        .cardBack {
+          transition: all 0.4s;
+          position: absolute;
+          left: 0;
+          right: 0;
+          background: white;
+          top: 0;
+          bottom: 0;
+          opacity: 0;
+          padding: 50px 25px;
+          display: flex;
+          align-items: center;
+          ul {
+            list-style: none;
+            li {
+              font-size: 20px;
+              line-height: 1.1;
+              color: #a0a0a0;
+              margin-bottom: 22px;
+              position: relative;
+              &:before {
+                content: "";
+                position: absolute;
+                background: $primary; /* or whatever color you prefer */
+                width: 10px;
+                height: 10px;
+                left: 0;
+                left: -20px;
+                top: 8px;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+        &:hover {
+          .cardBack {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: $mobileResolution) {
+  }
+}

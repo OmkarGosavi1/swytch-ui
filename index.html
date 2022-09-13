@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h1 class="title">Refresh Page for Random Number</h1>
+    <h1 id="randomNumber"></h1>
+  </body>
+  <script>
+    var temp = 0.5;
+    function Random() {
+      temp = (new Date().getTime() * Math.PI * temp) % 1;
+      console.log(temp === temp);
+      return (temp = temp);
+    }
+    console.log((Random() * 1000000).toFixed(0));
+    document.getElementById("randomNumber").innerHTML = (
+      Random() * 1000000
+    ).toFixed(0);
+  </script>
+</html>

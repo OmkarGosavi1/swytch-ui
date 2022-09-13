@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "KonexyPersonalUse";
+  src: url("/fonts/KonexyPersonalUse.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+.default-heading {
+  font-size: 2.875rem;
+  // font-weight: 700;
+  line-height: 1.1;
+  // color: #fff;
+  @media screen and (max-width: $mobileResolution) {
+    font-size: 2.3rem;
+  }
+  span {
+    color: $primary;
+  }
+  &.h1 {
+    font-size: 5.625rem;
+
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 3.375rem;
+    }
+  }
+  &.h3 {
+    font-size: 2.1rem;
+    line-height: 1.3;
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 24px;
+      line-height: 1.5;
+    }
+  }
+  &.h4 {
+    font-size: 1.2625rem;
+    @media screen and (max-width: $mobileResolution) {
+    }
+  }
+  &.subheading {
+    font-size: 1.2625rem;
+    text-transform: uppercase;
+    display: block;
+    @media screen and (max-width: $mobileResolution) {
+      font-size: 1rem;
+    }
+  }
+}
+p {
+  font-size: 1.125rem;
+  text-align: left;
+  @media screen and (max-width: $mobileResolution) {
+    font-size: 0.875rem;
+    text-align: center;
+    &.textLeft {
+      text-align: left;
+    }
+  }
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+
+.gradient-text {
+  background: linear-gradient(180deg, #dbb562 0%, #f4d6b2 122.58%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.d-hide {
+  @media screen and (min-width: $mobileResolution) {
+    display: none !important;
+  }
+}
+.m-hide {
+  @media screen and (max-width: $mobileResolution) {
+    display: none !important;
+  }
+}
